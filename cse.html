@@ -170,7 +170,7 @@
     }
   }
 
-  const images = ["images/congruent_stim.png", "images/incongruent_stim.png", "images/qweertz_bill.png"]
+  const images = ["images/congruent_stim.png", "images/incongruent_stim.png", "images/qwertz_bill.png","images/instrukcio.png"]
 
   var preload = {
     type: jsPsychPreload,
@@ -354,7 +354,7 @@
       if (last_trial_correct) {
         return "<p></p>";
       } else {
-        return `"<p>` + exp_text['feedback_prompt'][lang] + `</p>"`
+        return `<p>` + exp_text['feedback_prompt'][lang] + `</p>`
       }
     },
     data: {
