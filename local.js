@@ -21,19 +21,19 @@ const exp_text =  {
     },
     'informed_consent_next' : {
         'hun' : 'A továbblépéshez kattints a Részt veszek gombra!',
-        'eng' : ''
+        'eng' : 'To continue press "I participate"'
     },
     'informed_consent_next_no' : {
         'hun' : 'Részt veszek',
-        'eng' : ''
+        'eng' : 'I participate'
     },
     'informed_consent_next_yes' : {
         'hun' : 'Nem veszek részt',
-        'eng' : ''
+        'eng' : "I don't participate"
     },
     'informed_consent_2_title' : {
         'hun' : 'Beleegyező nyilatkozat',
-        'eng' : ''
+        'eng' : 'Consent form'
     },
     'informed_consent_2_p1' : {
         'hun' : 'Felelősségem teljes tudatában kijelentem, hogy a mai napon az Eötvös Loránd Tudományegyetem, Dr. Aczél Balázs kutatásvezető által végzett vizsgálatban önként veszek részt. A vizsgálat jellegéről annak megkezdése előtt kielégítő tájékoztatást kaptam. Elmúltam 18 éves. Nem szenvedek semmilyen pszichiátriai betegségben. A vizsgálat idején alkohol vagy drogok hatása alatt nem állok. Tudomásul veszem, hogy az azonosításomra alkalmas személyi adataimat bizalmasan kezelik. Hozzájárulok ahhoz, hogy a vizsgálat során a rólam felvett, személyem azonosítására nem alkalmas adatok más kutatók számára is hozzáférhetők legyenek. Fenntartom a jogot arra, hogy a vizsgálat során annak folytatásától bármikor elállhassak. Ilyen esetben a rólam addig felvett adatokat törölni kell. Tudomásul veszem, hogy csak a teljesen befejezett kitöltésért kapok pontot a Pszichológiai kísérletben és tudományos aktivitásban való részvétel című kurzuson.',
@@ -45,7 +45,7 @@ const exp_text =  {
     },
     'instructions_title' : {
         'hun' : 'Instrukció',
-        'eng' : ''
+        'eng' : 'Instructions'
     },
     'instructions_p1' : {
         'hun' : 'Kérünk, hogy a feladatot számítógépen végezd el (ne telefonon, tableten stb.)! Nagyon fontos, hogy a kísérlet során végig tudj összpontosítani, ezért kérünk, hogy ne csinálj semmi mást, miközben a feladatot csinálod! Ha 70% feletti pontossággal oldod meg a feladatot, valamint, ha elvégzed a feladat mindkét részét, akkor 1 pontot kapsz a „Pszichológiai kísérletben és tudományos aktivitásban való részvétel” nevű kurzuson. Ha a megoldásod pontossága 70%-nál alacsonyabb lesz (ami egy ésszerű határ az előző kutatások fényében), illetve ha csak az egyik részt teljesíted, akkor nem kapsz pontot a kitöltésért.',
@@ -57,23 +57,23 @@ const exp_text =  {
     },
     'instructions_p3' : {
         'hun' : 'Nyomd meg a Space billentyűt a folytatáshoz!',
-        'eng' : ''
+        'eng' : 'Press Space to continue'
     },
     'survey_title' : {
         'hun' : 'Kérlek add meg a NEPTUN kódodat és az alábbi demográfiai adataidat:',
-        'eng' : ''
+        'eng' : 'Please fill out the demographic form'
     },
     'survey_q1' : {
         'hun' : 'Mi a NEPTUN kódod?:',
-        'eng' : ''
+        'eng' : 'null'
     },
     'survey_q2' : {
-        'hun' : 'Milyen nemű vagy?:',
-        'eng' : ''
+        'hun' : 'Milyen nemű vagy?',
+        'eng' : 'What is your sex?'
     },
     'survey_q2_choices' : {
         'hun' : ['Férfi', 'Nő', 'Egyéb'],
-        'eng' : ''
+        'eng' : ['Male', 'Female', 'Else']
     },
     'survey_dropdown_prompt' : {
         'hun' : 'Válassz...',
@@ -81,19 +81,19 @@ const exp_text =  {
     },
     'survey_q3' : {
         'hun' : 'Mennyi idős vagy?',
-        'eng' : ''
+        'eng' : 'How old are you?'
     },
     'survey_q4' : {
         'hun' : 'Mi a legmagasabb iskolai végzettséged?',
-        'eng' : ''
+        'eng' : 'What is your highest education?'
     },
     'survey_q4_choices' : {
         'hun' : ["befejezett 8. osztály", "érettségi", "emelt szintű szakképesítés (pl. emelt OKJ)", "felsőoktatási alapfokozat (BA/BSc)", "felsőoktatási mesterfokozat (MA/MSc)", "doktori fokozat (PhD/DLA)"],
-        'eng' : ''
+        'eng' : ["completed 8th grade", "high-school graduation", "advanced professional/vocational qualification (e.g. VET)", "basic degree of higher education (BA/BSc)", "master's degree of higher education (MA/MSc)", "doctoral degree (PhD/DLA)"]
     },
     'required_error' : {
         'hun' : 'Kérlek válaszolj az alábbi kérdésre!',
-        'eng' : ''
+        'eng' : 'Please answer the required questions!'
     },
     'send_prompt' : {
         'hun' : 'Beküldés',
@@ -101,27 +101,27 @@ const exp_text =  {
     },
     'end_of_block_title' : {
         'hun' : 'Blokk vége',
-        'eng' : 'Send'
+        'eng' : 'End of block'
     },
     'end_of_block_p1' : {
         'hun' : 'Ennek a blokknak a végére értél!',
-        'eng' : 'Send'
+        'eng' : 'You have reached the end of this block!'
     },
     'end_of_block_p2' : {
         'hun' : 'Ha szeretnél, nyugodtan tarts egy rövid, 1-2 perces szünetet!',
-        'eng' : 'Send'
+        'eng' : ''
     },
     'end_of_block_p3' : {
         'hun' : ' Emlékeztető a billentyűkhöz: 1 billentyű -> F, 2 billentyű -> H, 8 billentyű -> N, 9 billentyű -> P.',
-        'eng' : 'Send'
+        'eng' : ''
     },
     'end_of_block_next' : {
-        'hun' : 'Nyomd meg a Space billentyűt a folytatáshoz!',
-        'eng' : 'Send'
+        'hun' : 'Nyomd meg a Space billentyűt a folytatáshoz',
+        'eng' : 'Press Space to continue'
     },
     'end_of_practice_title' : {
         'hun' : 'Gyakorló Blokk vége',
-        'eng' : ''
+        'eng' : 'End of practice block'
     },
     'end_of_practice_p1' : {
         'hun' : 'A gyakorló blokk végére értél! Ez után hat kb 4 perces blokk következik.',
@@ -137,7 +137,7 @@ const exp_text =  {
     },
     'feedback_prompt' : {
         'hun' : 'Helytelen / Nincs válasz',
-        'eng' : ''
+        'eng' : 'Wrong / No response detected'
     },
     'fullscreen_button_label' : {
         'hun' : 'Tovább',
