@@ -65,7 +65,7 @@ const exp_text =  {
     },
     'survey_q1' : {
         'hun' : 'Mi a NEPTUN kódod?:',
-        'eng' : 'null'
+        'eng' : 'What is your university ID?'
     },
     'survey_q2' : {
         'hun' : 'Milyen nemű vagy?',

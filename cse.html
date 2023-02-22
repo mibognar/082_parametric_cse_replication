@@ -87,10 +87,10 @@
   var consentProceed = true
 
   var preferred_language = {
-    type: 'survey-multi-choice',
+    type: jsPsychSurveyMultiChoice,
     questions: [{
       prompt: '<p>What is your preferred language? /</p>Milyen nyelven fusson a kísérlet?', 
-      options: ['English/Angol','Spanish/Spanyol'], 
+      options: ['English/Angol','Hungarian/Magyar'], 
       name: 'lang', 
       required: true
     }],
@@ -420,8 +420,8 @@
   }
 
   timeline.push(
-    fullscreen_trial,
     preferred_language,
+    fullscreen_trial,
     informedScreen,
     consentScreen,
     neptun_demographics,
