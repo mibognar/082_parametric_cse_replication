@@ -15,6 +15,7 @@
   <script src="jspsych/dist/plugin-preload.js"></script>
   <script src="jatos.js"></script>
   <script src="local.js"></script>
+  <script src="config.js"></script>
   <link href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
   <link href="css/082_exp_design.css" rel="stylesheet" type="text/css" />
   <link href="css/survey.css" rel="stylesheet" type="text/css" />
@@ -83,26 +84,10 @@
   stimuli_reroll(test_stimuli_6, 0)
 
   var informedProceed = true
-  var lang = null
+  var debug = 0
+  var lang = config['language']
+  
   var consentProceed = true
-
-  var preferred_language = {
-    type: jsPsychSurveyMultiChoice,
-    questions: [{
-      prompt: '<p>What is your preferred language? /</p>Milyen nyelven fusson a kísérlet?', 
-      options: ['English/Angol','Hungarian/Magyar'], 
-      name: 'lang', 
-      required: true
-    }],
-    on_finish: function(data) {
-      // set the value of the lang variable based on the participant's choice
-      if (data.response.lang == "English/Angol") {
-        lang = 'eng';
-      } else {
-        lang = 'hun';
-      }
-    }
-  };
 
   // Informed
   var informedScreen = {
@@ -190,7 +175,7 @@
     }
   }
 
-  const images = ["images/congruent_stim.png", "images/incongruent_stim.png", "images/qwertz_bill.png","images/instrukcio.png"]
+  const images = ["images/congruent_stim.png", "images/incongruent_stim.png", "images/qwertz_bill.png", "images/instrukcio.png"]
 
   var preload = {
     type: jsPsychPreload,
@@ -420,7 +405,6 @@
   }
 
   timeline.push(
-    preferred_language,
     fullscreen_trial,
     informedScreen,
     consentScreen,

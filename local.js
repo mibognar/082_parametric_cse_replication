@@ -21,7 +21,7 @@ const exp_text =  {
     },
     'informed_consent_next' : {
         'hun' : 'A továbblépéshez kattints a Részt veszek gombra!',
-        'eng' : 'To continue press "I participate"'
+        'eng' : 'To continue press I participate'
     },
     'informed_consent_next_no' : {
         'hun' : 'Részt veszek',
@@ -29,7 +29,7 @@ const exp_text =  {
     },
     'informed_consent_next_yes' : {
         'hun' : 'Nem veszek részt',
-        'eng' : "I don't participate"
+        'eng' : 'I do not participate'
     },
     'informed_consent_2_title' : {
         'hun' : 'Beleegyező nyilatkozat',
