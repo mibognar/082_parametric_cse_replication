@@ -29,11 +29,16 @@
 </body>
 <script>
 
-  //------getting json
+  //------getting jsons
   var request = new XMLHttpRequest();
   request.open("GET", "trials97.json", false);
   request.send(null);
   const trial_blocks = JSON.parse(request.responseText);
+
+  var request2 = new XMLHttpRequest();
+  request2.open("GET", "practice_blocks.json", false);
+  request2.send(null);
+  const practice_blocks = JSON.parse(request2.responseText);
 
   // -------------------JsPsych-------------------------------------------------------------------------------------------
 
@@ -67,9 +72,15 @@
   //function to fill up stimuli arrays randomly------------------------
 
   function stimuli_reroll(array, practice) {
-    var random = Math.floor(Math.random() * trial_blocks["trials"].length);
+    if (practice = 1) {
+      var stimuli_blocks = practice_blocks
+    }
+    else {
+      stimuli_blocks = trial_blocks
+    }
+    var random = Math.floor(Math.random() * stimuli_blocks["trials"].length);
     //console.log(random)
-    var stimulus_set = trial_blocks["trials"][random]
+    var stimulus_set = stimuli_blocks["trials"][random]
     for (i = 0; i < stimulus_set.length; i += 1) {
       array.push({ stimulus: stimulus_set[i][0], congruency: stimulus_set[i][1], correct_response: stimulus_set[i][2] })
     }
@@ -374,7 +385,14 @@
 
   var procedure_practice = {
     timeline: [fixation, test, feedback],
-    timeline_variables: practice_stimuli
+    timeline_variables: practice_stimuli,
+    loop_function: function(data) {
+      var trials = jsPsych.data.get().filter({task: "response"})
+      var correct_trials = trials.filter({correct: true})
+      var accuracy = Math.round(correct_trials.count() / trials.count() * 100)
+      console.log(accuracy)
+      if (accuracy >= 85) {return false} else {return true}
+    }
   }
 
   var procedure_1 = {
