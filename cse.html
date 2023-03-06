@@ -36,7 +36,7 @@
   const trial_blocks = JSON.parse(request.responseText);
 
   var request2 = new XMLHttpRequest();
-  request2.open("GET", "practice_blocks.json", false);
+  request2.open("GET", "trials97.json", false);
   request2.send(null);
   const practice_blocks = JSON.parse(request2.responseText);
 
@@ -331,6 +331,33 @@
     }
   }
 
+  var practice_reloop_message = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus:  `
+  <div>
+  <h1>`+ exp_text['end_of_practice_loop_title'][lang] + `</h1>
+  <p>
+    `+ exp_text['end_of_practice_loop_p1'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_loop_p2'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_loop_p3'][lang] + `
+  </p>
+    `+ exp_text['end_of_block_next'][lang] + `
+  </div>
+  `,
+    choices: [" "],
+    post_trial_gap: 0,
+    data: {
+      task: 'pause_practice'
+    },
+    save_trial_parameters: {
+      stimulus: false
+    }
+  }
+
   var test = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: jsPsych.timelineVariable("stimulus"),
@@ -347,7 +374,6 @@
     },
     css_classes: ['stim']
   }
-
 
   var fixation = {
     type: jsPsychHtmlKeyboardResponse,
@@ -386,10 +412,22 @@
   var procedure_practice = {
     timeline: [fixation, test, feedback],
     timeline_variables: practice_stimuli,
+  }
+
+  var practice_reloop_node = {
+    timeline: [procedure_practice, practice_reloop_message],
+    conditional_function: function(){
+      var accuracy = 0
+      if(accuracy >= 85){
+          return false;
+        } else {
+          return true;
+        }
+      },
     loop_function: function(data) {
       var trials = jsPsych.data.get().filter({task: "response"})
       var correct_trials = trials.filter({correct: true})
-      var accuracy = Math.round(correct_trials.count() / trials.count() * 100)
+      accuracy = Math.round(correct_trials.count() / trials.count() * 100)
       console.log(accuracy)
       if (accuracy >= 85) {return false} else {return true}
     }
@@ -428,7 +466,7 @@
     consentScreen,
     neptun_demographics,
     instructionsScreen,
-    procedure_practice,
+    practice_reloop_node,
     pause_practice,
     procedure_1,
     pause,

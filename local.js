@@ -135,6 +135,22 @@ const exp_text =  {
         'hun' : 'Emlékeztető a billentyűkhöz: 1 billentyű -> F, 2 billentyű -> H, 8 billentyű -> N, 9 billentyű -> P.',
         'eng' : 'Key reminder: 1 key -> F, 2 key -> H, 8 key -> N, 9 key -> P.'
     },
+    'end_of_practice_loop_title' : {
+        'hun' : 'Gyakorló Blokk vége',
+        'eng' : 'End of practice block'
+    },
+    'end_of_practice_loop_p1' : {
+        'hun' : 'A gyakorló blokk végére értél! Sajnos nem érted el a megkívánt pontosságot ezért a gyakorló blook újraindul.',
+        'eng' : 'You have reached the end of the practice block! Unfortunately, you did not reach the required accuracy, so the practice block restarts.'
+    },
+    'end_of_practice_loop_p2' : {
+        'hun' : 'Ha szeretnél, nyugodtan tarts egy rövid, 1-2 perces szünetet!',
+        'eng' : 'If you want, feel free to take a short break of 1-2 minutes!'
+    },
+    'end_of_practice_loop_p3' : {
+        'hun' : 'Emlékeztető a billentyűkhöz: 1 billentyű -> F, 2 billentyű -> H, 8 billentyű -> N, 9 billentyű -> P.',
+        'eng' : 'Key reminder: 1 key -> F, 2 key -> H, 8 key -> N, 9 key -> P.'
+    },
     'feedback_prompt' : {
         'hun' : 'Helytelen / Nincs válasz',
         'eng' : 'Wrong / No response detected'
