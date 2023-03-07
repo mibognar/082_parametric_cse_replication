@@ -47,8 +47,16 @@ const exp_text =  {
         'hun' : 'Instrukció',
         'eng' : 'Instructions'
     },
+    'instructions_instruct_1' : {
+        'hun' : 'Ebben a kísérletben arra vagyunk kíváncsiak, hogy az emberek hogyan oldják fel a vizuális ingerek feldolgozása közben létrejövő ellentmondásokat. A kísérlet alatt 5 betűből álló sorozatokat fogsz látni egymás után a képernyő közepén, ahogy a lenti pédák is mutatják.',
+        'eng' : 'In this experiment, we are interested in how people resolve the conflicts that arise during the processing of visual stimuli. During the experiment, you will see sequences of 5 letters one after the other in the middle of the screen, as shown in the pads below.'
+    },
+    'instructions_instruct_2' : {
+        'hun' : 'Minden egyes betűsornál az a feladatod, hogy meghatározd a középső betűt, miközben a többi betűt figyelmen kívül hagyod. Például, a helyes válaszok a fenti példákra az F és az N. Az 1, 2, 8, 9 billentyűket fogod a válaszadásra használni. A bizonyos gombok bizonyos betűkhöz tartoznak amit az alábbi kép mutat be. A gombok használatát a gyakorló résznél lesz lehetőséged begyakorolni. Kérjük, hogy olyan gyorsan válaszolj amilyen hamar csak tudsz a lehető legpontosabban.',
+        'eng' : 'For each row of letters, your task is to identify the middle letter while ignoring the other letters. For example, the correct answers to the examples above are F and N. You will use the keys 1, 2, 8, 9 to answer. Certain buttons belong to certain letters, which is shown in the picture below. You will have the opportunity to practice using the buttons in the practice section. Please respond as quickly as possible as accurately as possible.'
+    },
     'instructions_p1' : {
-        'hun' : 'Kérünk, hogy a feladatot számítógépen végezd el (ne telefonon, tableten stb.)! Nagyon fontos, hogy a kísérlet során végig tudj összpontosítani, ezért kérünk, hogy ne csinálj semmi mást, miközben a feladatot csinálod! Ha 70% feletti pontossággal oldod meg a feladatot, valamint, ha elvégzed a feladat mindkét részét, akkor 1 pontot kapsz a „Pszichológiai kísérletben és tudományos aktivitásban való részvétel” nevű kurzuson. Ha a megoldásod pontossága 70%-nál alacsonyabb lesz (ami egy ésszerű határ az előző kutatások fényében), illetve ha csak az egyik részt teljesíted, akkor nem kapsz pontot a kitöltésért.',
+        'hun' : 'Kérünk, hogy a feladatot számítógépen végezd el (ne telefonon, tableten stb.)! Nagyon fontos, hogy a kísérlet során végig tudj összpontosítani, ezért kérünk, hogy ne csinálj semmi mást, miközben a feladatot csinálod! Ha 85% feletti pontossággal oldod meg a feladatot, valamint, akkor 1 pontot kapsz a „Pszichológiai kísérletben és tudományos aktivitásban való részvétel” nevű kurzuson. Ha a megoldásod pontossága 85%-nál alacsonyabb lesz (ami egy ésszerű határ az előző kutatások fényében), akkor nem kapsz pontot a kitöltésért.',
         'eng' : 'We ask that you do the task on a computer (not on a phone, tablet, etc.)! It is very important that you can focus throughout the experiment, so we ask that you do not do anything else while doing the task!'
     },
     'instructions_p2' : {
