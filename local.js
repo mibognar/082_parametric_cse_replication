@@ -148,7 +148,7 @@ const exp_text =  {
         'eng' : 'End of practice block'
     },
     'end_of_practice_loop_p1' : {
-        'hun' : 'A gyakorló blokk végére értél! Sajnos nem érted el a megkívánt pontosságot ezért a gyakorló blook újraindul.',
+        'hun' : 'A gyakorló blokk végére értél! Sajnos nem érted el a megkívánt pontosságot ezért a gyakorló blokk újraindul.',
         'eng' : 'You have reached the end of the practice block! Unfortunately, you did not reach the required accuracy, so the practice block restarts.'
     },
     'end_of_practice_loop_p2' : {
