@@ -72,14 +72,14 @@
   //function to fill up stimuli arrays randomly------------------------
 
   function stimuli_reroll(array, practice) {
-    if (practice = 1) {
+    if (practice == 1) {
       var stimuli_blocks = practice_blocks
     }
     else {
       stimuli_blocks = trial_blocks
     }
     var random = Math.floor(Math.random() * stimuli_blocks["trials"].length);
-    //console.log(random)
+    console.log(random)
     var stimulus_set = stimuli_blocks["trials"][random]
     for (i = 0; i < stimulus_set.length; i += 1) {
       array.push({ stimulus: stimulus_set[i][0], congruency: stimulus_set[i][1], correct_response: stimulus_set[i][2] })
