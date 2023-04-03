@@ -48,7 +48,7 @@
     timeline: timeline,
     on_finish: function () {
       jatos.endStudy(jsPsych.data.get().csv());
-      //jsPsych.data.displayData();
+      jsPsych.data.displayData();
     },
     override_safe_mode: true
   })
@@ -371,7 +371,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: jsPsych.timelineVariable("stimulus"),
     choices: ["1", "2", "8", "9"],
-    trial_duration: 1500,
+    trial_duration: 1,
     response_ends_trial: true,
     data: {
       task: "response",
@@ -388,7 +388,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<div style="font-size:60px; color: gray;">+</div>',
     choices: "NO_KEYS",
-    trial_duration: 500,
+    trial_duration: 1,
     response_ends_trial: false,
     data: {
       task: 'fixation'
@@ -414,7 +414,7 @@
     save_trial_parameters: {
       stimulus: false
     },
-    trial_duration: 800,
+    trial_duration: 1,
     response_ends_trial: false,
   }
 
@@ -430,7 +430,7 @@
       if(accuracy >= 85){
           return false;
         } else {
-          return true;
+          return false;
         }
       },
     loop_function: function(data) {
