@@ -340,33 +340,6 @@
     }
   }
 
-  var practice_reloop_message = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus:  `
-  <div>
-  <h1>`+ exp_text['end_of_practice_loop_title'][lang] + `</h1>
-  <p>
-    `+ exp_text['end_of_practice_loop_p1'][lang] + `
-  </p>
-  <p>
-    `+ exp_text['end_of_practice_loop_p2'][lang] + `
-  </p>
-  <p>
-    `+ exp_text['end_of_practice_loop_p3'][lang] + `
-  </p>
-    `+ exp_text['end_of_block_next'][lang] + `
-  </div>
-  `,
-    choices: [" "],
-    post_trial_gap: 0,
-    data: {
-      task: 'pause_practice'
-    },
-    save_trial_parameters: {
-      stimulus: false
-    }
-  }
-
   var test = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: jsPsych.timelineVariable("stimulus"),
@@ -423,10 +396,58 @@
     timeline_variables: practice_stimuli,
   }
 
+  var accuracy = 0;
+
+  var practice_reloop_message = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: function() {
+      if (!(accuracy >= 85)) {
+        return `
+  <div>
+  <h1>`+ exp_text['end_of_practice_loop_title'][lang] + `</h1>
+  <p>
+    `+ exp_text['end_of_practice_loop_p1'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_loop_p2'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_loop_p3'][lang] + `
+  </p>
+    `+ exp_text['end_of_block_next'][lang] + `
+  </div>
+  `
+      } else {
+        return `
+  <div>
+  <h1>`+ exp_text['end_of_practice_title'][lang] + `</h1>
+  <p>
+    `+ exp_text['end_of_practice_p1'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_p2'][lang] + `
+  </p>
+  <p>
+    `+ exp_text['end_of_practice_p3'][lang] + `
+  </p>
+    `+ exp_text['end_of_block_next'][lang] + `
+  </div>
+  `
+      }
+    },
+    choices: [" "],
+    post_trial_gap: 0,
+    data: {
+      task: 'pause_practice'
+    },
+    save_trial_parameters: {
+      stimulus: false
+    }
+  }
+
   var practice_reloop_node = {
     timeline: [procedure_practice, practice_reloop_message],
     conditional_function: function(){
-      var accuracy = 0
       if(accuracy >= 85){
           return false;
         } else {
@@ -441,6 +462,8 @@
       if (accuracy >= 85) {return false} else {return true}
     }
   }
+
+  
 
   var procedure_1 = {
     timeline: [fixation, test, feedback],
@@ -476,7 +499,7 @@
     neptun_demographics,
     instructionsScreen,
     practice_reloop_node,
-    pause_practice,
+    //pause_practice,
     procedure_1,
     pause,
     procedure_2,
