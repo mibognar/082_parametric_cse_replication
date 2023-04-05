@@ -72,15 +72,17 @@
   //function to fill up stimuli arrays randomly------------------------
 
   function stimuli_reroll(array, practice) {
-    if (practice = 1) {
+    if (practice == 1) {
       var stimuli_blocks = practice_blocks
     }
     else {
       stimuli_blocks = trial_blocks
     }
     var random = Math.floor(Math.random() * stimuli_blocks["trials"].length);
-    //console.log(random)
+    //console.log(stimuli_blocks["trials"][0])
+    console.log(random)
     var stimulus_set = stimuli_blocks["trials"][random]
+    console.log(stimulus_set)
     for (i = 0; i < stimulus_set.length; i += 1) {
       array.push({ stimulus: stimulus_set[i][0], congruency: stimulus_set[i][1], correct_response: stimulus_set[i][2] })
     }
@@ -97,7 +99,7 @@
   var informedProceed = true
   var debug = 0
   var lang = config['language']
-  
+
   var consentProceed = true
 
   // Informed
@@ -313,7 +315,7 @@
     }
   }
 
-  var pause_practice = {
+  /*var pause_practice = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
   <div>
@@ -338,7 +340,9 @@
     save_trial_parameters: {
       stimulus: false
     }
-  }
+  }*/
+
+  var PracticeLoopIndex = 1;
 
   var test = {
     type: jsPsychHtmlKeyboardResponse,
@@ -347,12 +351,13 @@
     trial_duration: 1500,
     response_ends_trial: true,
     data: {
-      task: "response",
+      task: 'response',
       correct_response: jsPsych.timelineVariable("correct_response"),
       congruency: jsPsych.timelineVariable("congruency")
     },
     on_finish: function (data) {
       data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      data.loop = PracticeLoopIndex;
     },
     css_classes: ['stim']
   }
@@ -391,20 +396,37 @@
     response_ends_trial: false,
   }
 
+  var accuracy = 0;
+
   var procedure_practice = {
     timeline: [fixation, test, feedback],
     timeline_variables: practice_stimuli,
+    data: {
+      block: 'practice'
+    },
+    on_finish: function (data) {
+      
+      var trials = jsPsych.data.get().filter({task: 'response', loop: PracticeLoopIndex})
+      var correct_trials = jsPsych.data.get().filter({task: 'response', correct: true, loop: PracticeLoopIndex})
+      accuracy = Math.round(correct_trials.count() / trials.count() * 100)
+      console.log('trials: ' + trials.count())
+      console.log('correct trials: ' + correct_trials.count())
+      console.log('acccuracy: ' + accuracy)
+      //console.log(jsPsych.data.get()).filter({task: 'response', loop: PracticeLoopIndex})
+    }
   }
 
-  var accuracy = 0;
+  
 
   var practice_reloop_message = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: function() {
-      if (!(accuracy >= 85)) {
-        return `
+    stimulus: function () {
+      return `
   <div>
   <h1>`+ exp_text['end_of_practice_loop_title'][lang] + `</h1>
+  <p>
+    `+ exp_text['end_of_practice_loop_p0'][lang] + accuracy + '%' +`
+  </p>
   <p>
     `+ exp_text['end_of_practice_loop_p1'][lang] + `
   </p>
@@ -417,23 +439,6 @@
     `+ exp_text['end_of_block_next'][lang] + `
   </div>
   `
-      } else {
-        return `
-  <div>
-  <h1>`+ exp_text['end_of_practice_title'][lang] + `</h1>
-  <p>
-    `+ exp_text['end_of_practice_p1'][lang] + `
-  </p>
-  <p>
-    `+ exp_text['end_of_practice_p2'][lang] + `
-  </p>
-  <p>
-    `+ exp_text['end_of_practice_p3'][lang] + `
-  </p>
-    `+ exp_text['end_of_block_next'][lang] + `
-  </div>
-  `
-      }
     },
     choices: [" "],
     post_trial_gap: 0,
@@ -447,23 +452,41 @@
 
   var practice_reloop_node = {
     timeline: [procedure_practice, practice_reloop_message],
-    conditional_function: function(){
-      if(accuracy >= 85){
-          return false;
-        } else {
-          return true;
-        }
-      },
-    loop_function: function(data) {
-      var trials = jsPsych.data.get().filter({task: "response"})
-      var correct_trials = trials.filter({correct: true})
+    /*conditional_function: function () {
+      console.log('accuracy: ' + accuracy)
+      if (accuracy >= 85) {
+        console.log('condition passed')
+        return false
+      } else {
+        console.log('condition failed; executing node')
+        return true
+      }
+    },*/
+    on_timeline_start: function (data) {
+      console.log(PracticeLoopIndex + '. practice loop')
+    },
+    on_timeline_finish: function () {
+      PracticeLoopIndex++
+    },
+    loop_function: function (data) {
+      /*var trials = jsPsych.data.get().filter({loop: PracticeLoopIndex - 1})
+      var correct_trials = trials.filter({ correct: true })
       accuracy = Math.round(correct_trials.count() / trials.count() * 100)
-      console.log(accuracy)
-      if (accuracy >= 85) {return false} else {return true}
+      console.log('trials: ' + trials.count())
+      console.log('correct trials: ' + correct_trials.count())
+      console.log(accuracy)*/
+
+      if (accuracy >= 85) { 
+      console.log('accuracy passed') 
+      return false 
+    } else { 
+      console.log('accuracy failed')
+      return true
     }
+    },
   }
 
-  
+
 
   var procedure_1 = {
     timeline: [fixation, test, feedback],

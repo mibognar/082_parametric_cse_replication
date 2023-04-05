@@ -127,29 +127,17 @@ const exp_text =  {
         'hun' : 'Nyomd meg a Space billentyűt a folytatáshoz',
         'eng' : 'Press Space to continue'
     },
-    'end_of_practice_title' : {
-        'hun' : 'Gyakorló Blokk vége',
-        'eng' : 'End of practice block'
-    },
-    'end_of_practice_p1' : {
-        'hun' : 'A gyakorló blokk végére értél! Ez után hat kb 4 perces blokk következik.',
-        'eng' : 'You have reached the end of the practice block! This is followed by six approximately 4-minute blocks.'
-    },
-    'end_of_practice_p2' : {
-        'hun' : 'Ha szeretnél, nyugodtan tarts egy rövid, 1-2 perces szünetet!',
-        'eng' : 'If you want, feel free to take a short break of 1-2 minutes!'
-    },
-    'end_of_practice_p3' : {
-        'hun' : 'Emlékeztető a billentyűkhöz: 1 billentyű -> F, 2 billentyű -> H, 8 billentyű -> N, 9 billentyű -> P.',
-        'eng' : 'Key reminder: 1 key -> F, 2 key -> H, 8 key -> N, 9 key -> P.'
-    },
     'end_of_practice_loop_title' : {
         'hun' : 'Gyakorló Blokk vége',
         'eng' : 'End of practice block'
     },
+    'end_of_practice_loop_p0' : {
+        'hun' : 'A gyakorló blokk végére értél! A gyakorló blokkon elért pontosságod:',
+        'eng' : 'You have reached the end of the practice block! Your accuracy on the practice block was: '
+    },
     'end_of_practice_loop_p1' : {
-        'hun' : 'A gyakorló blokk végére értél! Sajnos nem érted el a megkívánt pontosságot ezért a gyakorló blokk újraindul.',
-        'eng' : 'You have reached the end of the practice block! Unfortunately, you did not reach the required accuracy, so the practice block restarts.'
+        'hun' : 'A pontosságodtól függően a gyakorló blokk újraindulhat, vagy a teszt blokkba léphetsz át. Amennyiben a pontosságod 85% fölött van, a teszt következik. Ha nem, a gyakorló blokk újraindul.',
+        'eng' : 'Depending on your accuracy, the practice block may restart, or you may proceed to the test block. If your accuracy is above 85%, you will proceed to the test. If not, the practice block will restart.',
     },
     'end_of_practice_loop_p2' : {
         'hun' : 'Ha szeretnél, nyugodtan tarts egy rövid, 1-2 perces szünetet!',
