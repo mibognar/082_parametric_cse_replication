@@ -13,7 +13,7 @@ const exp_text =  {
     },
     'informed_consent_p3' : {
         'hun' : 'Az ELTE PPK Affektív Pszichológia Tanszék Metatudomány Kutatócsoportja mintadatkezelő szigorúan bizalmasan kezel minden olyan személyes információt, amit a kutatás keretein belül gyűjtünk össze. Ezeket kóddal ellátva, biztonságos számítógépeken tároljuk. A kezelt adatok a következők:NEPTUN-kód, életkor, nem, iskolai végzettség. Az azonosítására alkalmasadatokat (NEPTUN-kód) arra használjuk fel, hogy regisztrálhassuk a kutatásban való részvételért járó kurzuspontokat, ezután törölni fogjuk őket.  Válaszaid semmilyen módon nem lesznek hozzád köthetők. Személyes adataidat más adatkezelőnek, adatfeldolgozónak nem adjuk át, ám az anonimizált (személyes azonosításra nem alkalmas) adataid más kutatókkal megosztjuk. E tényállás részleteit a „Hozzájárulás adatkezeléshez” c. dokumentum tartalmazza <a target="_blank" href="http://metasciencelab.elte.hu/hozzajarulas-adatkezeleshez">ITT</a>. Az adatkezelésről szóló szabályozásról részletesebben pedig <a target="_blank" href="https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf.">ITT</a> tájékozódhatsz.',
-        'eng' : 'The Metascience Research Group of the Affective Psychology Department of ELTE PPK, as a data manager, treats all personal information collected within the framework of research as strictly confidential. We store them with a code on secure computers. The processed data are as follows: NEPTUN code, age, gender, education. The data suitable for identification (NEPTUN code) will be used to register course points for participating in the research, after which they will be deleted. Your answers will not be linked to you in any way. We will not transfer your personal data to other data managers or data processors, but we will share your anonymized (not suitable for personal identification) data with other researchers. The details of this fact can be found in "Contribution to data management". document contains <a target="_blank" href="http://metasciencelab.elte.hu/hozzajarulas-adatkezeleshez">HERE</a>. You can find out more about the regulations on data management <a target="_blank" href="https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf.">HERE</a>.'
+        'eng' : 'The Metascience Research Group of the Affective Psychology Department of ELTE PPK, as a data manager, treats all personal information collected within the framework of research as strictly confidential. We store them with a code on secure computers. The processed data are as follows: University ID, age, gender, education. The data suitable for identification (NEPTUN code) will be used to register course points for participating in the research, after which they will be deleted. Your answers will not be linked to you in any way. We will not transfer your personal data to other data managers or data processors, but we will share your anonymized (not suitable for personal identification) data with other researchers. The details of this fact can be found in "Contribution to data management". document contains <a target="_blank" href="http://metasciencelab.elte.hu/hozzajarulas-adatkezeleshez">HERE</a>. You can find out more about the regulations on data management <a target="_blank" href="https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf.">HERE</a>.'
     },
     'informed_consent_p4' : {
         'hun' : 'A kutatás során nyert személyes adataidat arra használjuk fel, hogy regisztrálhassuk a részvételért járó kurzuspontokat. Az azonosítására alkalmas adatokat (NEPTUN kód) ezután törölni fogjuk. A kezelt adatok a következők: Neptun-kód, Életkor, Nem, Iskolai végzettség.Válaszaid nem lesznek semmilyen módon hozzád köthetők. Az anonimizált adataidat más kutatókkal megosztjuk.',
@@ -61,7 +61,7 @@ const exp_text =  {
     },
     'instructions_p2' : {
         'hun' : 'A teszt egy gyakorló résszel indul, ahol 85%-os pontossággal kell teljesítened, hogy kitölthesd a tesztet. Amennyiben nem éred el a 85%-ot, a gyakorló blokk mindaddig újraindul, amíg ez a pontossági szint nem valósul meg.',
-        'eng' : 'The test starts with a practice part where you have to pass with 85% accuracy to pass the test. If you do not reach 85%, the practice block will restart until this level of accuracy is achieved.'
+        'eng' : 'The test starts with a practice part where you have to pass with 85% accuracy to proceed. If you do not reach 85%, the practice block will restart until this level of accuracy is achieved.'
     },
     'instructions_p3' : {
         'hun' : 'Nyomd meg a Space billentyűt a folytatáshoz!',
@@ -109,7 +109,7 @@ const exp_text =  {
     },
     'end_of_block_title' : {
         'hun' : 'Blokk vége',
-        'eng' : 'End of block'
+        'eng' : 'block has ended'
     },
     'end_of_block_p1' : {
         'hun' : 'Ennek a blokknak a végére értél!',
@@ -167,8 +167,8 @@ const exp_text =  {
         'eng' : 'Thank you very much for your participation!'
     },
     'end_of_exp_p3' : {
-        'hun' : 'Ha bármilyen kérdésed vagy észrevételed van, kérlek írj az alábbi email címre: bognar.miklos@ppk.elte.hu',
-        'eng' : 'If you have any questions or feedback, please write to bognar.miklos@ppk.elte.hu'
+        'hun' : 'Ha bármilyen kérdésed vagy észrevételed van, kérlek írj az alábbi email címre: bognar.miklos@ppk.elte.hu.',
+        'eng' : 'If you have any questions or feedback, please get back to us at bognar.miklos@ppk.elte.hu.'
     },
     'end_of_exp_next' : {
         'hun' : 'Nyomd meg a Space billentyűt a kilépéshez',

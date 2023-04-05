@@ -292,7 +292,8 @@
 
   var pause = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
+    stimulus: function () {
+      return `
   <div>
   <h1>` + TestLoopIndex + '.' + exp_text['end_of_block_title'][lang] + `</h1>
   <p>
@@ -306,7 +307,7 @@
   </p>
   `+ exp_text['end_of_block_next'][lang] + `
   </div>
-  `,
+  `},
     choices: [" "],
     post_trial_gap: 0,
     data: {
@@ -350,7 +351,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: jsPsych.timelineVariable("stimulus"),
     choices: ["1", "2", "8", "9"],
-    trial_duration: 1500,
+    trial_duration: 1,
     response_ends_trial: true,
     data: {
       task: 'response',
@@ -360,6 +361,7 @@
     on_finish: function (data) {
       data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
       data.loop = PracticeLoopIndex;
+      data.testloop = TestLoopIndex;
     },
     css_classes: ['stim']
   }
@@ -368,7 +370,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<div style="font-size:60px; color: gray;">+</div>',
     choices: "NO_KEYS",
-    trial_duration: 500,
+    trial_duration: 1,
     response_ends_trial: false,
     data: {
       task: 'fixation'
@@ -394,7 +396,7 @@
     save_trial_parameters: {
       stimulus: false
     },
-    trial_duration: 800,
+    trial_duration: 1, //800,
     response_ends_trial: false,
   }
 
@@ -412,7 +414,7 @@
       accuracy = Math.round(correct_trials.count() / trials.count() * 100)
       //console.log('trials: ' + trials.count())
       //console.log('correct trials: ' + correct_trials.count())
-      console.log('acccuracy: ' + accuracy)
+      console.log('accuracy: ' + accuracy)
     }
   }
 
@@ -501,17 +503,19 @@
   var testblock_1 = {
     timeline: [procedure_1, pause],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
     },
     on_timeline_finish: function () {
       TestLoopIndex++
-    }
+    },
   }
 
   var testblock_2 = {
     timeline: [procedure_2, pause],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
+    },
+    on_timeline_finish: function () {
       TestLoopIndex++
     }
   }
@@ -519,7 +523,9 @@
   var testblock_3 = {
     timeline: [procedure_3, pause],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
+    },
+    on_timeline_finish: function () {
       TestLoopIndex++
     }
   }
@@ -527,7 +533,9 @@
   var testblock_4 = {
     timeline: [procedure_4, pause],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
+    },
+    on_timeline_finish: function () {
       TestLoopIndex++
     }
   }
@@ -535,14 +543,17 @@
   var testblock_5 = {
     timeline: [procedure_5, pause],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
+    },
+    on_timeline_finish: function () {
       TestLoopIndex++
     }
   }
 
   var endofexp = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
+    stimulus:function () {
+      return `
   <div>
   <h1>` + TestLoopIndex + '.' + exp_text['end_of_block_title'][lang] + `</h1>
   <p>
@@ -556,7 +567,7 @@
   </p>
   `+ exp_text['end_of_exp_next'][lang] + `
   </div>
-  `,
+  `},
     choices: [" "],
     post_trial_gap: 0,
     data: {
@@ -570,7 +581,9 @@
   var testblock_6 = {
     timeline: [procedure_6, endofexp],
     on_timeline_start: function (data) {
-      console.log(TestLoopIndex + '. test loop')
+      console.log(TestLoopIndex + '. test block')
+    },
+    on_timeline_finish: function () {
       TestLoopIndex++
     }
   }
