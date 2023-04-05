@@ -158,5 +158,24 @@ const exp_text =  {
     'fullscreen_text' : {
         'hun' : '<p>A kísérlet most teljes képernyős módra vált az alábbi gomb megnyomásával.</p>',
         'eng' : '<p>The experiment will switch to full screen mode when you press the button below</p>'
-    }, 
+    },'end_of_exp_p1' : {
+        'hun' : 'A kísérlet végére értél!',
+        'eng' : 'You have reached the end of the experiment!'
+    },
+    'end_of_exp_p2' : {
+        'hun' : 'Nagyon köszönjük a részvételt!',
+        'eng' : 'Thank you very much for your participation!'
+    },
+    'end_of_exp_p3' : {
+        'hun' : 'Ha bármilyen kérdésed vagy észrevételed van, kérlek írj az alábbi email címre: bognar.miklos@ppk.elte.hu',
+        'eng' : 'If you have any questions or feedback, please write to bognar.miklos@ppk.elte.hu'
+    },
+    'end_of_exp_next' : {
+        'hun' : 'Nyomd meg a Space billentyűt a kilépéshez',
+        'eng' : 'Press Space to exit'
+    },
+    'imagepath' : {
+        'hun' : 'images/keyboard_hun_kezes.jpg',
+        'eng' : 'images/keyboard_eng_hands.jpg'
+    }
 }
