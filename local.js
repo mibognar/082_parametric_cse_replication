@@ -149,7 +149,7 @@ const exp_text =  {
     },
     'feedback_prompt' : {
         'hun' : 'Helytelen / Nincs válasz',
-        'eng' : 'Wrong / No response detected'
+        'eng' : 'Wrong / Too late'
     },
     'fullscreen_button_label' : {
         'hun' : 'Tovább',
@@ -171,7 +171,7 @@ const exp_text =  {
         'eng' : 'If you have any questions or feedback, please get back to us at bognar.miklos@ppk.elte.hu.'
     },
     'end_of_exp_next' : {
-        'hun' : 'Nyomd meg a Space billentyűt a kilépéshez',
+        'hun' : 'Nyomd meg a Space billentyűt hogy megkaphasd a pontot a kísérletért!',
         'eng' : 'Press Space to exit'
     },
     'imagepath' : {

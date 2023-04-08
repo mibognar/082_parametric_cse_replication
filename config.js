@@ -1,1 +1,1 @@
-const config = {'language' : 'eng'}
+const config = {'language' : 'hun'}
