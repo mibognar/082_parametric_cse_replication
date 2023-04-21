@@ -62,7 +62,7 @@ const exp_text =  {
     'instructions_instruct_1' : {
         'hun' : 'Ebben a kísérletben arra vagyunk kíváncsiak, hogy az emberek hogyan oldják fel a vizuális ingerek feldolgozása közben létrejövő ellentmondásokat. A kísérlet alatt 5 betűből álló sorozatokat fogsz látni egymás után a képernyő közepén, ahogy a lenti pédák is mutatják.',
         'eng' : 'In this experiment, we are interested in how people resolve the conflicts that arise during the processing of visual stimuli. During the experiment, you will see sequences of 5 letters one after the other in the middle of the screen, as shown in the pads below.',
-        'ita' : "In questo esperimento, ci interessa capire come le persone risolvano conflitti che emergono durante l'elaborazione di stimoli visivi. Durante l'esperimento, vedrà sequenze di 5 lettere consecutive nel centro dello schermo, come mostrato nelle immagini sottostanti."
+        'ita' : "In questo esperimento, ci interessa capire come le persone risolvano conflitti che emergono durante l'elaborazione di stimoli visivi. Durante l'esperimento, vedrà sequenze di 5 lettere consecutive al centro dello schermo, come mostrato nelle immagini sottostanti."
     },
     'instructions_instruct_2' : {
         'hun' : 'Minden egyes betűsornál az a feladatod, hogy meghatározd a középső betűt, miközben a többi betűt figyelmen kívül hagyod. Például, a helyes válaszok a fenti példákra az N és az F. Az 1, 2, 8, 9 billentyűket fogod a válaszadásra használni. A bizonyos gombok bizonyos betűkhöz tartoznak amit az alábbi kép mutat be. A gombok használatát a gyakorló résznél lesz lehetőséged begyakorolni. Kérjük, hogy olyan gyorsan válaszolj amilyen hamar csak tudsz a lehető legpontosabban.',
@@ -167,12 +167,12 @@ const exp_text =  {
     'end_of_practice_loop_p0' : {
         'hun' : 'A gyakorló blokk végére értél! A gyakorló blokkon elért pontosságod:',
         'eng' : 'You have reached the end of the practice block! Your accuracy on the practice block was: ',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : "Ha raggiunto la fine del blocco di pratica! La percentuale di risposte corrette nel blocco di pratica è stata:"
     },
     'end_of_practice_loop_p1' : {
         'hun' : 'A pontosságodtól függően a gyakorló blokk újraindulhat, vagy a teszt blokkba léphetsz át. Amennyiben a pontosságod 85% fölött van, a teszt következik. Ha nem, a gyakorló blokk újraindul.',
         'eng' : 'Depending on your accuracy, the practice block may restart, or you may proceed to the test block. If your accuracy is above 85%, you will proceed to the test. If not, the practice block will restart.',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : "In base alla percentuale di risposte corrette, rifarà il blocco di pratica oppure comincerà l'esperimento vero e proprio. Se la percentuale di risposte corrette è superiore all'85%, comincerà l'esperimento. Altrimenti, rifarà il blocco di pratica."
     },
     'end_of_practice_loop_p2' : {
         'hun' : 'Ha szeretnél, nyugodtan tarts egy rövid, 1-2 perces szünetet!',
@@ -202,26 +202,26 @@ const exp_text =  {
     'end_of_exp_p1' : {
         'hun' : 'A kísérlet végére értél!',
         'eng' : 'You have reached the end of the experiment!',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : "Ha raggiunto la fine dell'esperimento!"
     },
     'end_of_exp_p2' : {
         'hun' : 'Nagyon köszönjük a részvételt!',
         'eng' : 'Thank you very much for your participation!',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : "Grazie mille per la sua partecipazione! Lo scopo di questo esperimento era capire come le lettere a fianco di quella centrale influenzano l'identificazione di quella centrale non solo all'interno di uno stesso trial ma anche in trial successivi. L'ipotesi è che più il numero di lettere incongruenti a quella centrale aumenta, più l'attenzione verso quella centrale verrà concentrata nei trial successivi, rendendoci meno sensibili al conflitto proveniente dalle lettere laterali."
     },
     'end_of_exp_p3' : {
         'hun' : 'Ha bármilyen kérdésed vagy észrevételed van, kérlek írj az alábbi email címre: bognar.miklos@ppk.elte.hu.',
         'eng' : 'If you have any questions or feedback, please get back to us at bognar.miklos@ppk.elte.hu.',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : "Se ha domande o feedback, può scriverci a giacomo.spinelli@unimib.it"
     },
     'end_of_exp_next' : {
         'hun' : 'Nyomd meg a Space billentyűt hogy megkaphasd a pontot a kísérletért!',
         'eng' : 'Press Space to exit',
-        'ita' : '///PLACEHOLDER///'
+        'ita' : 'PER USCIRE E RICEVERE IL CREDITO, PREMA SPAZIO.'
     },
     'imagepath' : {
         'hun' : 'images/keyboard_hun_kezes.jpg',
         'eng' : 'images/keyboard_eng_hands.jpg',
-        'ita' : 'images/keyboard_eng_hands.jpg'
+        'ita' : 'images/keyboard_it_hands.jpg'
     }
 }
