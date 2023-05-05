@@ -351,7 +351,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: jsPsych.timelineVariable("stimulus"),
     choices: ["1", "2", "8", "9"],
-    trial_duration:1,// 1500,
+    trial_duration: 1500,
     response_ends_trial: true,
     data: {
       task: 'response',
@@ -370,7 +370,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<div style="font-size:60px; color: gray;">+</div>',
     choices: "NO_KEYS",
-    trial_duration:1,// 500,
+    trial_duration: 500,
     response_ends_trial: false,
     data: {
       task: 'fixation'
@@ -396,7 +396,7 @@
     save_trial_parameters: {
       stimulus: false
     },
-    trial_duration: 1,//800,
+    trial_duration: 800,
     response_ends_trial: false,
   }
 
@@ -466,7 +466,7 @@
       return false 
     } else { 
       console.log('accuracy failed')
-      return false//true
+      return true
     }
     },
   }
